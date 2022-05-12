@@ -1,23 +1,16 @@
-# Compiled class file
-*.class
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+.project
+coin_market_automation/Logs
+coin_market_automation/Screenshots
+coin_market_automation/.settings
+coin_market_automation/bin
+coin_market_automation/.DS_Store
+coin_market_automation/target
+.DS_Store
+coin_market_automation/.classpath
+coin_market_automation/test-output
+coin_market_automation/temp/InfoEmail.html
+.idea
+coin_market_automation/temp/testVariables.json
+coin_market_automation/src/test/java/dashboard/runnerClass/DashboardTest.java

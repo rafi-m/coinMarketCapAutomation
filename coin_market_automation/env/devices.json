@@ -1,0 +1,71 @@
+{
+	"bs_7t_vnext": {
+		"app": "bs://3c64940b9cda1da75f3c0d1bd1695d287acb668c",
+		"device": "OnePlus 7T",
+		"os_version": "10.0",
+		"browserstack.user": "mohamedrafiudeen_sj8qua",
+		"browserstack.key": "yPsSaDKwSryBwyN5QBaa",
+		"autoGrantPermissions": "true",
+		"browserstack.timezone": "Dubai"
+	},
+		"bs_7t_uat": {
+		"app": "bs://13b36e36e51e9e2f2dc8dac6c0ef827cdaa03c2e",
+		"device": "OnePlus 7T",
+		"os_version": "10.0",
+		"browserstack.user": "mohamedrafiudeen_sj8qua",
+		"browserstack.key": "yPsSaDKwSryBwyN5QBaa",
+		"autoGrantPermissions": "true",
+		"browserstack.timezone": "Dubai"
+		
+	},
+	"local_emulator_vnext": {
+		"platformName": "Android",
+		"udid": "emulator-5554",
+		"appPackage": "com.jci.beeahcompanion.dev",
+		"automatorName": "UiAutomator2",
+		"appActivity": "dev.smart.experience.login.view.SplashScreenActivity",
+		"autoGrantPermissions": "true",
+		"noReset": false
+	},
+	"local_7t_vnext": {
+		"platformName": "Android",
+		"udid": "a1abe59e",
+		"appPackage": "com.jci.beeahcompanion.dev",
+		"automatorName": "UiAutomator2",
+		"appActivity": "dev.smart.experience.login.view.SplashScreenActivity",
+		"noReset": false,
+		"autoGrantPermissions": "true",
+		"chromedriverExecutable": "C:/Users/rafi_/Documents/AT.Mobile.iOS/BeeahAutomation/drivers/chromedriver.exe"
+	},
+		"local_m31_vnext": {
+		"platformName": "Android",
+		"udid": "RZ8NB1C465E",
+		"appPackage": "com.jci.beeahcompanion.dev",
+		"automatorName": "UiAutomator2",
+		"appActivity": "dev.smart.experience.login.view.SplashScreenActivity",
+		"noReset": false,
+		"autoGrantPermissions": "true"
+	},
+	"bs_ios_11pro_vnext":{
+	    "appPackage": "com.jci.navigate",
+        "deviceName": "iPhone 11 Pro Max",
+		"app": "bs://56c7c595fb7b4d49b5f6ce66aefa9b5b15ed1f07",
+        "automationName": "XCUITest",
+        "platformName": "ios",
+        "os_version": "13",
+		"autoAcceptAlerts": "true",
+        "browserstack.user": "mohamedrafiudeen_sj8qua",
+        "browserstack.key": "yPsSaDKwSryBwyN5QBaa"
+  },
+  "local_5t_vnext": {
+		"platformName": "Android",
+		"udid": "7dab6c7b",
+		"appPackage": "com.jci.beeahcompanion.dev",
+		"automatorName": "UiAutomator2",
+		"appActivity": "dev.smart.experience.login.view.SplashScreenActivity",
+		 "autoGrantPermissions":"true",
+		"noReset": false
+		
+	}
+  
+}

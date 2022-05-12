@@ -15,26 +15,14 @@ import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
-import helpers.ScenarioContext;
-import helpers.TestVariables;
-import helpers.TimeHelper;
 //import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
 public class Hooks {
 	Scenario scenario;
-	@Autowired
-	ScenarioContext context;
-	
-	@Autowired
-	TestVariables vars;
-	
-	@Autowired
-	TimeHelper time;
 	@Before
 	public void beforeScenario(Scenario scenario) {
 		this.scenario = scenario;
-			this.context.put("testStart", new Date());		
 	}
 
 	@After(order = 1)
@@ -74,11 +62,6 @@ public class Hooks {
 	@After(order = 0)
 	public void AfterSteps() {
 		try {
-			if(context.contains("testName")) {
-				String StartDate = time.toString((Date)this.context.get("testStart"), "yyyy-MM-dd'T'HH:mm:00");
-				this.context.put("testStart",StartDate);
-			}			
-			this.context.commit();
 			if (LocalDriverManager.getDashboardDriver() != null)
 				LocalDriverManager.getDashboardDriver().quit();
 			

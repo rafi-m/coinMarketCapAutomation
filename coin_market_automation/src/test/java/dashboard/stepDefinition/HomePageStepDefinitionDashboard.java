@@ -29,8 +29,6 @@ public class HomePageStepDefinitionDashboard extends BasicTest {
 	public void init(Scenario scenario) {
 		BasicTest.scenario = scenario;
 		this.scenario = scenario;
-		// scenario.write("TestInformation:TestVersion");
-		//this.context.put("parking_test:subject", "Automation_bc8bdea6-158d-4b22-8582-3addb11499ec");
 	}
 	
    @Given("user navigates to {string}")

@@ -87,7 +87,7 @@ public class HomePageObjectsDashboard extends BasicTest {
         List<Currency> currencies = new LinkedList<Currency>();
         for (WebElement row : sizes) {
 
-            System.out.println("validating Row Number: " + i);
+            System.out.println("Fetching Row Number: " + i);
             BasicTest.scenario.write("validating Row Number: " + i++);
             	String name = row.findElement(By.xpath("./td[3]/div/a/div/div/p")).getText();
                 String price = row.findElement(By.xpath("./td[4]/div[1]/a[1]/span[1]")).getText();
@@ -109,9 +109,9 @@ public class HomePageObjectsDashboard extends BasicTest {
                float min = Float.parseFloat(exp.get("min"));
                 float max = Float.parseFloat(exp.get("max"));
                 Assert.assertTrue(min <= actualPrice && actualPrice <= max);
-                BasicTest.scenario.write("Expected Price Range: " + min +"-"+max);
+                BasicTest.scenario.write("Expected Price Range: $" + min +"-$"+max);
                 System.out.println("Expected Price Range: $" + min +"-$"+max);
-                BasicTest.scenario.write("Actual Price: " + currencies.price);
+                BasicTest.scenario.write("Actual Price: $" + currencies.price);
                 System.out.println("Actual Price: $" + currencies.price);
             }
             else if(exp.get("filter").equals("Market Cap Range")){
@@ -121,7 +121,7 @@ public class HomePageObjectsDashboard extends BasicTest {
                 Assert.assertTrue(min <= actualMarkCapRange && actualMarkCapRange <= max);
                 BasicTest.scenario.write("Expected Market Cap Range: $" + min +"-$"+max);
                 System.out.println("Expected Market Cap Range: $" + min +"-$"+max);
-                BasicTest.scenario.write("Actual Market Cap Range: " + currencies.marketCap);
+                BasicTest.scenario.write("Actual Market Cap Range: $" + currencies.marketCap);
                 System.out.println("Actual Market Cap Range: $" + currencies.marketCap);
 
             }

@@ -33,8 +33,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
-import helpers.TestVariables;
-//import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
 import io.appium.java_client.AppiumDriver;
@@ -46,8 +44,6 @@ import io.cucumber.core.api.Scenario;
 
 @Configuration("classpath:cucumber.xml")
 public class BasicTest {
-	@Autowired
-	public TestVariables variables;
 	String date;
 	DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 	DateFormat formatTestEndTimestamp = new SimpleDateFormat("yyyy-mm-dd HH:mm:ss");

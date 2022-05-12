@@ -8,10 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = { "src/test/java/Dashboard/features" },
 		glue = {"dashboard.stepDefinition"},
-		tags = {"@web-task"},
+	//	tags = {"@backend-task2"},
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
 		monochrome = true)
-public class WebTest {
+public class CoinMarketTest {
 	@BeforeClass
 	public static void setEnvironment() {
 		System.setProperty("org.freemarker.loggerLibrary", "none");

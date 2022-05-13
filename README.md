@@ -38,7 +38,7 @@ cd coin_market_automation
 ```
 Running the test
 ```bash
-\Code_Repository\coinMarketCapAutomation\coin_market_automation> mvn test
+ mvn test
 ```
 
 Use the following command to Run specfic test by replacing "@tagName"
@@ -49,3 +49,8 @@ Run All Web Tasks => @web-tasks
 Run Web Task 1 => @web-task1  
 Run All Backend Tasks => @backend-task  
 Run Backend Task 2 => @backend-task2
+
+Run the following command to view the test report in HTML format
+```bash
+test-output\spark\index.html
+```

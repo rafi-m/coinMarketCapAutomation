@@ -64,12 +64,15 @@ public class HomePageObjectsDashboard extends BasicTest {
 
     public void setSize(String sizeString) throws InterruptedException {
         this.rows.click();
-        List<WebElement> sizes = this.driver.findElements(By.xpath("//div[@class='sc-16r8icm-0 sc-1f0grbq-0 cEoyCq']/button"));
-        TimeUnit.SECONDS.sleep(1);
-        for (WebElement size : sizes) {
-            if (size.getText().equals(sizeString))
-                size.click();
-        }
+        TimeUnit.SECONDS.sleep(2);
+        WebElement btnSize = this.driver.findElement(By.xpath("//button[contains(text(),'"+sizeString+"')]"));
+        btnSize.click();
+        //getting saleElementReference Exception on below code. needs refactoring
+//        List<WebElement> sizes = this.driver.findElements(By.xpath("//div[@class='sc-16r8icm-0 sc-1f0grbq-0 cEoyCq']/button"));
+//        for (WebElement size : sizes) {
+//            if (size.getText().equals(sizeString))
+//                size.click();
+//        }
         TimeUnit.SECONDS.sleep(3);
         this.scrollToTable();
     }

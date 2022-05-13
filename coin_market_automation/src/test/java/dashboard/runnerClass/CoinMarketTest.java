@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = { "src/test/java/Dashboard/features" },
 		glue = {"dashboard.stepDefinition"},
-	//	tags = {"@backend-task2"},
+		tags = {"@backend-task3"},
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
 		monochrome = true)
 public class CoinMarketTest {

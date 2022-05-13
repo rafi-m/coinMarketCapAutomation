@@ -50,7 +50,6 @@ public class CoinMarketApi {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("id", id);
         String response = RestClient.getRequest("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info", headers, params);
-        System.out.println(response);
         ObjectMapper obj = new ObjectMapper();
         Models.InfoResponse infoResponse = new Gson().fromJson(response, Models.InfoResponse.class);
         HashMap<String, Models.Info> currencies = new HashMap<>();

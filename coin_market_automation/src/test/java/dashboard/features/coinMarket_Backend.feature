@@ -12,7 +12,7 @@ Feature: Backend Task - Validate Currency API
       | ETH      | 20     |
 
   @backend-task2 @backend
-  Scenario: Backend Task 3 - validate Technical Documentation of Single Currency
+  Scenario: Backend Task 2 - validate Technical Documentation of Single Currency
     Given get the information about "1027"
     Then verify following details
       | id   | logo                                                         | tech_doc                                         | symbol | date_added               | tags     |
@@ -20,7 +20,7 @@ Feature: Backend Task - Validate Currency API
 
 
   @backend-task3
-  Scenario: Backend Task 2 - validate Technical Documentation of Multiple Currency
+  Scenario: Backend Task 3 - validate Technical Documentation of Multiple Currency
     Given get the information about "1,2,3,4,5,6,7,8,9,10"
     Then verify following details
       | id | symbol | tags     |

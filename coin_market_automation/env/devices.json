@@ -1,0 +1,12 @@
+{
+  "android_oneplus_7t": {
+    "app": "bs://3e5f6be8a119c4f32ab463fa60d67d4ec002ad0a",
+    "device": "OnePlus 7T",
+    "os_version": "10.0",
+    "browserstack.user": "mohamedrafiudeen_sj8qua",
+    "browserstack.key": "yPsSaDKwSryBwyN5QBaa",
+    "browserstack.appium_version": "1.19.1",
+    "platformName": "Android",
+    "package-id": "us.zoom.videomeetings"
+  }
+}

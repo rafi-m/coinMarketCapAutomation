@@ -25,7 +25,7 @@ public class Hooks {
 		this.scenario = scenario;
 	}
 
-	@After(order = 1)
+	@After("@ui")
 	public void afterScenario(Scenario scenario) throws Exception {
 		if (scenario.isFailed() && LocalDriverManager.getDashboardDriver() != null) {
 			try {

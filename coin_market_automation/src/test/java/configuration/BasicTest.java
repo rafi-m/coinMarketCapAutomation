@@ -275,6 +275,7 @@ public class BasicTest {
 	}
 
 	public void takeAndAttachScreenshot() throws InterruptedException {
+		System.out.println("Taking Screenshot...");
 		TimeUnit.SECONDS.sleep(2);
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("MM_dd_yyyy_h_mm_ss");
@@ -289,8 +290,10 @@ public class BasicTest {
 			
 			scenario.embed(screenshot, "image/png");
 			ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(destinationPath.getAbsolutePath());
+			System.out.println("Screenshot Captured...");
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
+			System.out.println("Error in Taking Screenshot");
 		}
 	}
 

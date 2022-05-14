@@ -44,13 +44,13 @@ public class HomePageStepDefinitionDashboard extends BasicTest {
 	@Given("scrolls to the table")
 	public void scrollToTable() throws Exception {
 		objHomePageObjects.scrollToTable();
-		this.scenario.write("Before Applying Row Size");
+		this.scenario.write("Scrolling to table..");
 		takeAndAttachDashboardScreenshot();
 	}
 	@Given("size of row is set to {string}")
 	public void setSize(String size) throws Exception {
 		objHomePageObjects.setSize(size);
-		this.scenario.write("Before Applying Row Size: " + size);
+		this.scenario.write("After Applying Row Size: " + size);
 		takeAndAttachDashboardScreenshot();
 	}
 

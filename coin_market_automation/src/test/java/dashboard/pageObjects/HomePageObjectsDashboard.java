@@ -42,6 +42,9 @@ public class HomePageObjectsDashboard extends BasicTest {
     @FindBy(xpath = "//body/div[@id='__next']/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[5]/button[1]")
     private WebElement moreFilters;
 
+    @FindBy(xpath = "//button[text()='No thanks']")
+    private WebElement btnNoThanks;
+
     public HomePageObjectsDashboard() {
     }
 
@@ -141,7 +144,14 @@ public class HomePageObjectsDashboard extends BasicTest {
         wait.until(ExpectedConditions.visibilityOf(this.moreFilters));
         this.moreFilters.click();
         this.filterPage.init();
-
+        try{
+            System.out.println("Checking for feedback button..");
+            wait.until(ExpectedConditions.visibilityOf(btnNoThanks));
+            btnNoThanks.click();
+            System.out.println("Clicking No thanks on feedback pop up");
+        }catch (Exception ex){
+            System.out.println("There was no feedback Pop Up..");
+        }
         for (Map<String, String> filter : filters) {
             this.filterPage.setFilter(filter.get("filter"), filter.get("value"));
             TimeUnit.SECONDS.sleep(2);

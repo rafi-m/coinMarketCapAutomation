@@ -1,7 +1,7 @@
-@backend-task
+@backend-task @backend
 Feature: Validate Currency API
 
-  @backend-task1
+  @backend-task1 @backend
   Scenario Outline: Validate currency conversion for given currency
     Given Fetch the id for "<Currency>"
     When convert amount "<Amount>" to "BOB"
@@ -11,7 +11,7 @@ Feature: Validate Currency API
       | USDT     | 30     |
       | ETH      | 20     |
 
-  @backend-task2
+  @backend-task2 @backend
   Scenario: validate Technical Documentation of Currency
     Given get the information about "1027"
     Then verify following details
@@ -21,16 +21,16 @@ Feature: Validate Currency API
 
   @backend-task3
   Scenario: validate Technical Documentation of Currency
-    Given get the information about "1020,1021,1022,1023,1024,1025,1026,1027,1028,1029"
+    Given get the information about "1,2,3,4,5,6,7,8,9,10"
     Then verify following details
-      | id   | symbol   | tags   |
-      | 1020 | AXIOM  | mineable |
-      | 1021 | CHIP   | mineable |
-      | 1022 | BTU    | mineable |
-      | 1023 | EGD    | mineable |
-      | 1024 | SPC    | mineable |
-      | 1025 | CS     | mineable |
-      | 1026 | AEON   | mineable |
-      | 1027 | ETH    | mineable |
-      | 1028 | SJW    | mineable |
-      | 1029 | TENNET | mineable |
+      | id | symbol | tags     |
+      | 1  | BTC    | mineable |
+      | 2  | LTC    | mineable |
+      | 3  | NMC    | mineable |
+      | 4  | TRC    | mineable |
+      | 5  | PPC    | mineable |
+      | 6  | NVC    | mineable |
+      | 7  | DVC    | mineable |
+      | 8  | FTC    | mineable |
+      | 9  | MNC    | mineable |
+      | 10 | FRC    | mineable |

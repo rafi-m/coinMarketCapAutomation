@@ -61,8 +61,8 @@ follow below steps to run the test locally.
 4. open ZoomApp.feature file and change the device name as given in devices.json
 
 ## Test Reports
-HTML test reports will automatically open once all the test has been run.
-Run the following command can be used to view the test report manually.
+HTML test reports will automatically open once all the test has been run.  
+Following command can be used to view the test report manually.
 ```bash
 test-output\spark\index.html
 ```

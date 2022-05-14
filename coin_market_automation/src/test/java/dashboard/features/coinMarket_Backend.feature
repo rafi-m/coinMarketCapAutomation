@@ -1,8 +1,8 @@
 @backend-task @backend
-Feature: Validate Currency API
+Feature: Backend Task - Validate Currency API
 
   @backend-task1 @backend
-  Scenario Outline: Validate currency conversion for given currency
+  Scenario Outline: Backend Task 1 - Validate currency conversion for given currency
     Given Fetch the id for "<Currency>"
     When convert amount "<Amount>" to "BOB"
     Examples:
@@ -12,7 +12,7 @@ Feature: Validate Currency API
       | ETH      | 20     |
 
   @backend-task2 @backend
-  Scenario: validate Technical Documentation of Currency
+  Scenario: Backend Task 2 - validate Technical Documentation of Single Currency
     Given get the information about "1027"
     Then verify following details
       | id   | logo                                                         | tech_doc                                         | symbol | date_added               | tags     |
@@ -20,7 +20,7 @@ Feature: Validate Currency API
 
 
   @backend-task3
-  Scenario: validate Technical Documentation of Currency
+  Scenario: Backend Task 2 - validate Technical Documentation of Multiple Currency
     Given get the information about "1,2,3,4,5,6,7,8,9,10"
     Then verify following details
       | id | symbol | tags     |

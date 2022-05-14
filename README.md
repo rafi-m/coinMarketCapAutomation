@@ -66,3 +66,9 @@ Following command can be used to view the test report manually.
 ```bash
 test-output\spark\index.html
 ```
+### Sample Report
+sample report looks like this!!
+
+https://user-images.githubusercontent.com/43473887/168449109-3365841a-7d9f-4950-aea0-16d50eda924b.mp4
+
+

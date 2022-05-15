@@ -2,6 +2,7 @@ package dashboard.stepDefinition;
 
 import configuration.BasicTest;
 import dashboard.pageObjects.CoinMarketApi;
+import helpers.CapabilitiesHelper;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;

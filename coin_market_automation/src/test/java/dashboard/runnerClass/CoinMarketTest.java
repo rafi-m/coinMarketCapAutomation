@@ -15,7 +15,7 @@ import java.io.IOException;
 @CucumberOptions(
 		features = { "src/test/java/Dashboard/features" },
 		glue = {"dashboard.stepDefinition"},
-	//	tags = {"@web-task2"},
+	//	tags = {"@mobile-task"},
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
 		monochrome = true)
 public class CoinMarketTest {

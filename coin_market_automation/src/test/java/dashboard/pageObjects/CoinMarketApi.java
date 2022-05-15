@@ -3,29 +3,36 @@ package dashboard.pageObjects;
 import com.google.gson.Gson;
 import com.jayway.jsonpath.JsonPath;
 import configuration.BasicTest;
+import helpers.CapabilitiesHelper;
 import models.Models;
 
 import org.assertj.core.api.SoftAssertions;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.junit.Assert;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import helpers.RestClient;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
 public class CoinMarketApi {
     private String apiKey;
+    private String host;
+    CapabilitiesHelper capablities;
 
-    public CoinMarketApi() {
-        this.apiKey = "44ad0aef-5de2-4947-9dc5-b0f49b89a3f9";
+    public CoinMarketApi() throws IOException {
+        this.capablities = new CapabilitiesHelper();
+        this.host = capablities.getCapablities("coinMarket").get("host");
+        this.apiKey = capablities.getCapablities("coinMarket").get("apiKey");;
     }
 
     public Models.MapResponse getAllCryptoCurrencyMap() throws Exception {
         HashMap<String, String> headers = new HashMap<String, String>();
         headers.put("X-CMC_PRO_API_KEY", this.apiKey);
-        String response = RestClient.getRequest("https://pro-api.coinmarketcap.com/v1/cryptocurrency/map", headers, null);
+        String response = RestClient.getRequest(this.host+"/v1/cryptocurrency/map", headers, null);
         // System.out.println(response);
         Models.MapResponse maps = new Gson().fromJson(response, Models.MapResponse.class);
         return maps;
@@ -38,7 +45,7 @@ public class CoinMarketApi {
         params.put("id", source);
         params.put("amount", amount);
         params.put("convert", dest);
-        String response = RestClient.getRequest("https://pro-api.coinmarketcap.com/v2/tools/price-conversion", headers, params);
+        String response = RestClient.getRequest(this.host+"/v2/tools/price-conversion", headers, params);
         Double convertedValue = JsonPath.read(response, "$.data.quote.BOB.price");
         System.out.println(convertedValue);
         return convertedValue;
@@ -53,12 +60,7 @@ public class CoinMarketApi {
         ObjectMapper obj = new ObjectMapper();
         Models.InfoResponse infoResponse = new Gson().fromJson(response, Models.InfoResponse.class);
         HashMap<String, Models.Info> currencies = new HashMap<>();
-        for (String curr : infoResponse.data.keySet()) {
-            String ids = infoResponse.data.get(curr).id;
-            Models.Info info = infoResponse.data.get(curr);
-            currencies.put(ids, info);
-        }
-        return currencies;
+        return infoResponse.data;
     }
 
     public void assertCurrenyInformation(Map<String,String> assertions, HashMap<String, Models.Info> currencies,SoftAssertions soft){

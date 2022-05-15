@@ -8,5 +8,10 @@
     "browserstack.appium_version": "1.19.1",
     "platformName": "Android",
     "package-id": "us.zoom.videomeetings"
+  },
+  "coinMarket": {
+    "url": "https://coinmarketcap.com/",
+    "apiKey": "44ad0aef-5de2-4947-9dc5-b0f49b89a3f9",
+    "host": "https://pro-api.coinmarketcap.com"
   }
 }

@@ -3,6 +3,7 @@ package dashboard.stepDefinition;
 import java.util.List;
 import java.util.Map;
 
+import helpers.CapabilitiesHelper;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -24,6 +25,8 @@ public class HomePageStepDefinitionDashboard extends BasicTest {
 	WebDriver driver = null;
 	@Autowired
 	HomePageObjectsDashboard objHomePageObjects;
+	@Autowired
+	CapabilitiesHelper capabilities;
 	Scenario scenario;
 	@Before
 	public void init(Scenario scenario) {
@@ -32,7 +35,8 @@ public class HomePageStepDefinitionDashboard extends BasicTest {
 	}
 	
    @Given("user navigates to {string}")
-    public void homePageNavigation(String url) throws Exception {
+    public void homePageNavigation(String website) throws Exception {
+	   String url = capabilities.getCapablities(website).get("url");
 		DriverScript objDriverScript = new DriverScript();
 		LocalDriverManager.setDashboardWebDriver(objDriverScript.startDashboardDriver());
 		this.driver = LocalDriverManager.getDashboardDriver();

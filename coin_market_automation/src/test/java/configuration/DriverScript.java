@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-import helpers.MobileCapablities;
+import helpers.CapabilitiesHelper;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,7 +27,7 @@ public class DriverScript extends LocalDriverManager {
 
 	public AppiumDriver<MobileElement> StartMobileDriver(String device) throws Exception {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		HashMap<String, String> capMap = new MobileCapablities().getDeviceCapablities(device);
+		HashMap<String, String> capMap = new CapabilitiesHelper().getCapablities(device);
 		this.currentCapablities = capMap;
 		for (String key : capMap.keySet()) {
 			capabilities.setCapability(key, capMap.get(key));

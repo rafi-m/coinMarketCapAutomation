@@ -9,6 +9,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,19 +24,19 @@ public class ZoomAppHomePage extends BasicTest {
     @Autowired
     DriverScript objDriverScript;
     AppiumDriver<MobileElement> driver = null;
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/btnJoinConf")
+    @FindBy(id = "us.zoom.videomeetings:id/btnJoinConf")
     private WebElement btnJoinMeeting;
 
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/edtConfNumber")
+    @FindBy(id = "us.zoom.videomeetings:id/edtConfNumber")
     private WebElement lblMeetingId;
 
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/chkNoVideo")
+    @FindBy(id = "us.zoom.videomeetings:id/chkNoVideo")
     private WebElement btnToggleVideo;
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/btnJoin")
+    @FindBy(id = "us.zoom.videomeetings:id/btnJoin")
     private WebElement btnJoin;
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/txtMsg")
+    @FindBy(id = "us.zoom.videomeetings:id/txtMsg")
     private WebElement lblErrorMsg;
-    @AndroidFindBy(id = "us.zoom.videomeetings:id/button2")
+    @FindBy(id = "us.zoom.videomeetings:id/button2")
     private WebElement btnOk;
 
     private WebDriverWait wait;
@@ -43,7 +44,7 @@ public class ZoomAppHomePage extends BasicTest {
     public void launchZoomApp(String device) throws Exception {
         LocalDriverManager.setWebDriver(objDriverScript.StartMobileDriver(device));
         this.driver = LocalDriverManager.getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(this.driver), this);
+        PageFactory.initElements(this.driver, this);
         takeAndAttachScreenshot();
         this.wait = new WebDriverWait(driver, 30);
     }

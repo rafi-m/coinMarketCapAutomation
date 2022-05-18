@@ -10,14 +10,14 @@ Appium and android studio(if running the mobile automation locally)
 Chrome Browser Version 101
 
 Open command promt and type "java --version".  
-Similar result should be displayed.
+Similar result should be displayed.(JDK 15 is preffered as AppiumFieldDecorator class has compatablity issues with JDK > 15)
 
 ```bash
 openjdk 15 2020-09-15
 OpenJDK Runtime Environment (build 15+36-1562)
 OpenJDK 64-Bit Server VM (build 15+36-1562, mixed mode, sharing)
 ```
-Open command promt and type "mvn--version".  
+Open command promt and type "mvn --version".  
 Similar result should be displayed.
 
 ```bash

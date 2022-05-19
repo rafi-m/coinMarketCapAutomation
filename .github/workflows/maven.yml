@@ -24,4 +24,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
+      working-directory: ./coin_market_automation
       run: mvn test

@@ -1,16 +1,16 @@
 
 
 .project
-coin_market_automation/Logs
-coin_market_automation/Screenshots
-coin_market_automation/.settings
-coin_market_automation/bin
-coin_market_automation/.DS_Store
-coin_market_automation/target
+Logs
+Screenshots
+.settings
+bin
 .DS_Store
-coin_market_automation/.classpath
-coin_market_automation/test-output
-coin_market_automation/temp/InfoEmail.html
+target
+.DS_Store
+.classpath
+test-output
+temp/InfoEmail.html
 .idea
-coin_market_automation/temp/testVariables.json
-coin_market_automation/src/test/java/dashboard/runnerClass/DashboardTest.java
+temp/testVariables.json
+src/test/java/dashboard/runnerClass/DashboardTest.java

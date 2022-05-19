@@ -7,11 +7,25 @@
     "browserstack.key": "yPsSaDKwSryBwyN5QBaa",
     "browserstack.appium_version": "1.19.1",
     "platformName": "Android",
-    "package-id": "us.zoom.videomeetings"
+    "package-id": "us.zoom.videomeetings",
+    "build": "Zoom",
+    "project": "Zoom"
   },
   "coinMarket": {
     "url": "https://coinmarketcap.com/",
     "apiKey": "44ad0aef-5de2-4947-9dc5-b0f49b89a3f9",
     "host": "https://pro-api.coinmarketcap.com"
+  },
+  "android_pixel_6": {
+    "app": "bs://3e5f6be8a119c4f32ab463fa60d67d4ec002ad0a",
+    "device": "Google Pixel 6",
+    "build": "Zoom",
+    "project": "Zoom",
+    "package-id": "us.zoom.videomeetings",
+    "os_version": "12.0",
+    "browserstack.user": "mohamedrafiudeen_sj8qua",
+    "browserstack.key": "yPsSaDKwSryBwyN5QBaa",
+    "autoGrantPermissions": "true",
+    "browserstack.timezone": "Dubai"
   }
 }

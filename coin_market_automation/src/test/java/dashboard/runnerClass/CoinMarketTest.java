@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = { "src/test/java/Dashboard/features" },
+		features = { "./src/test/java/Dashboard/features" },
 		glue = {"dashboard.stepDefinition"},
 	//	tags = {"@mobile-task"},
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },

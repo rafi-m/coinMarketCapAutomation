@@ -25,4 +25,10 @@ jobs:
     - name: Build with Maven
       working-directory: coin_market_automation
       run: mvn test
+      
+    - name: Archive HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: html_report
+        path: coin_market_automation/test-output
      

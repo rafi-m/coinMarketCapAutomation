@@ -55,6 +55,8 @@ public class DriverScript extends LocalDriverManager {
 		}
 		else if(SystemUtils.IS_OS_LINUX){
 			File f = new File("drivers/chromedriver");
+			f.setReadable(true);
+			f.setWritable(true);
 			f.setExecutable(true);
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		}

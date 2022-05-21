@@ -1,10 +1,12 @@
 package configuration;
 
+import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 import helpers.CapabilitiesHelper;
+import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -43,10 +45,18 @@ public class DriverScript extends LocalDriverManager {
 	}
 
 	public WebDriver startDashboardDriver() {
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+
 		try {
 			LocalDriverManager.getDashboardDriver().quit();
 		} catch (Exception e) {
+		}
+		if(SystemUtils.IS_OS_WINDOWS){
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		}
+		else if(SystemUtils.IS_OS_LINUX){
+			File f = new File("drivers/chromedriver");
+			f.setExecutable(true);
+			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		}
 		chromeDriver = new ChromeDriver();
 		chromeDriver.manage().window().maximize();
